@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1300.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BookingMenuController">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1300.0" prefWidth="1280.0" styleClass="backgroundColor" stylesheets="@style.css">
+         <children>
+            <HBox fx:id="images" opacity="0.36" prefHeight="100.0" prefWidth="200.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/preview.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="400.0" fitWidth="400.0">
+                     <image>
+                        <Image url="@images/mexicano.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="400.0" fitWidth="400.0">
+                     <image>
+                        <Image url="@images/mexicano2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="400.0" fitWidth="400.0" opacity="0.94">
+                     <image>
+                        <Image url="@images/mexicano1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="400.0" fitWidth="400.0">
+                     <image>
+                        <Image url="@images/mexicano3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <StackPane fx:id="burgerBackgroundFake" alignment="TOP_LEFT" prefHeight="208.0" prefWidth="262.0" styleClass="burgerbarColor" stylesheets="@style.css" AnchorPane.topAnchor="40.0" />
+            <AnchorPane prefHeight="30.0" prefWidth="200.0" styleClass="barBackgroundColor" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <StackPane prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label contentDisplay="CENTER" text="El Compadre's">
+                           <font>
+                              <Font name="CalabooseDEMO" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="menu" fitHeight="54.0" fitWidth="51.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/burgerBar.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="dropDownMenu" layoutY="32.0" prefHeight="234.0" prefWidth="262.0" snapToPixel="false" styleClass="burgerbarColor" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <VBox prefHeight="214.0" prefWidth="263.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Button fx:id="home" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#switchToHomeScreen" prefHeight="28.0" prefWidth="100.0" styleClass="barButton" stylesheets="@style.css" text="Home">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font name="SF Pro Text Semibold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="mainMenu" alignment="TOP_LEFT" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToMaimMenuScene" prefHeight="28.0" prefWidth="100.0" styleClass="barButton" stylesheets="@style.css" text="Menu">
+                           <font>
+                              <Font name="SF Pro Text Semibold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bookingMenu" alignment="TOP_LEFT" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" styleClass="barButton" stylesheets="@style.css" text="Booking">
+                           <font>
+                              <Font name="SF Pro Text Semibold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="gallery" alignment="TOP_LEFT" layoutX="30.0" layoutY="87.0" mnemonicParsing="false" onAction="#switchToGalleryScene" prefHeight="28.0" prefWidth="99.0" styleClass="barButton" stylesheets="@style.css" text="Gallery">
+                           <font>
+                              <Font name="SF Pro Text Semibold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </VBox>
+                  <Button fx:id="contactUsMenu" alignment="TOP_LEFT" layoutX="145.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToContactUsScene" prefHeight="28.0" prefWidth="99.0" styleClass="barButton" stylesheets="@style.css" text="Contact Us">
+                     <font>
+                        <Font name="SF Pro Text Semibold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="logInButton" alignment="TOP_LEFT" layoutX="145.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToLogInScene" prefHeight="28.0" prefWidth="100.0" styleClass="barButton" stylesheets="@style.css" text="Log In">
+                     <font>
+                        <Font name="SF Pro Text Semibold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="signInButton" alignment="TOP_LEFT" layoutX="145.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToSingInScene" prefHeight="28.0" prefWidth="100.0" styleClass="barButton" stylesheets="@style.css" text="Sign In">
+                     <font>
+                        <Font name="SF Pro Text Semibold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="exitButton" alignment="TOP_LEFT" disable="true" layoutX="145.0" layoutY="135.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" styleClass="barButton" stylesheets="@style.css" text="Exit">
+                     <font>
+                        <Font name="SF Pro Text Semibold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="125.0" layoutY="255.0" prefHeight="88.0" prefWidth="1039.0" styleClass="specifiedLabel" stylesheets="@style.css" text="Booking" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="116.0">
+               <font>
+                  <Font name="CalabooseDEMO" size="50.0" />
+               </font>
+            </Label>
+            <Button fx:id="myProfileButton" alignment="CENTER" layoutX="51.0" mnemonicParsing="false" onAction="#switchToProfileScene" prefHeight="39.0" prefWidth="171.0" styleClass="trasparentButton" stylesheets="@style.css" text="My Profile" visible="false">
+               <font>
+                  <Font name="CalabooseDEMO" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="38.0" layoutY="474.0" text="Name:">
+               <font>
+                  <Font name="CalabooseDEMO" size="48.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" alignment="TOP_LEFT" layoutX="34.0" layoutY="548.0" prefHeight="55.0" prefWidth="264.0" promptText="Amigo">
+               <font>
+                  <Font name="CalabooseDEMO" size="29.0" />
+               </font>
+            </TextField>
+            <Label layoutX="36.0" layoutY="632.0" text="Email:">
+               <font>
+                  <Font name="CalabooseDEMO" size="48.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email" alignment="TOP_LEFT" layoutX="29.0" layoutY="716.0" prefHeight="55.0" prefWidth="515.0" promptText="Amigo@gmall.com">
+               <font>
+                  <Font name="CalabooseDEMO" size="29.0" />
+               </font>
+            </TextField>
+            <Label layoutX="353.0" layoutY="475.0" text="Phone:">
+               <font>
+                  <Font name="CalabooseDEMO" size="48.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phone" alignment="TOP_LEFT" layoutX="348.0" layoutY="547.0" prefHeight="55.0" prefWidth="419.0" promptText="+77752014438">
+               <font>
+                  <Font name="CalabooseDEMO" size="15.0" />
+               </font>
+            </TextField>
+
+            <Label layoutX="353.0" layoutY="580.0" text="Age:">
+               <font>
+                  <Font name="CalabooseDEMO" size="15.0" />
+               </font>
+            </Label>
+
+            <TextField fx:id="age" alignment="TOP_LEFT" layoutX="348.0" layoutY="590.0" prefHeight="55.0" prefWidth="300.0" promptText="+77752014438">
+               <font>
+                  <Font name="CalabooseDEMO" size="15.0" />
+               </font>
+            </TextField>
+
+            <Label layoutX="802.0" layoutY="471.0" text="Date:">
+               <font>
+                  <Font name="CalabooseDEMO" size="48.0" />
+               </font>
+            </Label>
+            <TextField fx:id="date" alignment="TOP_LEFT" layoutX="806.0" layoutY="543.0" prefHeight="55.0" prefWidth="432.0" promptText="HH:mm a dd.MM.yyyy">
+               <font>
+                  <Font name="CalabooseDEMO" size="29.0" />
+               </font>
+            </TextField>
+            <Label layoutX="575.0" layoutY="632.0" text="People count:">
+               <font>
+                  <Font name="CalabooseDEMO" size="48.0" />
+               </font>
+            </Label>
+            <MenuButton fx:id="peopleCount" layoutX="604.0" layoutY="712.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="198.0" styleClass="menuButtons" text="COUNT">
+              <items>
+                <MenuItem fx:id="one" mnemonicParsing="false" styleClass="transparentButton" text="1" />
+                <MenuItem fx:id="two" mnemonicParsing="false" text="2" />
+                  <MenuItem fx:id="three" mnemonicParsing="false" text="3" />
+                  <MenuItem fx:id="four" mnemonicParsing="false" text="4" />
+              </items>
+               <font>
+                  <Font name="CalabooseDEMO" size="27.0" />
+               </font>
+            </MenuButton>
+            <TextArea fx:id="specialRequests" layoutX="45.0" layoutY="881.0" prefHeight="395.0" prefWidth="763.0" promptText="Write smth" styleClass="text-area" stylesheets="@style.css" wrapText="true">
+               <font>
+                  <Font name="CalabooseDEMO" size="31.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="37.0" layoutY="801.0" text="Special requests">
+               <font>
+                  <Font name="CalabooseDEMO" size="48.0" />
+               </font>
+            </Label>
+            <Button fx:id="bookButton" alignment="CENTER" layoutX="885.0" layoutY="1062.0" mnemonicParsing="false" prefHeight="191.0" prefWidth="282.0" styleClass="menuButtons" stylesheets="@style.css" text="Book">
+               <font>
+                  <Font name="CalabooseDEMO" size="53.0" />
+               </font>
+            </Button>
+            <Label layoutX="811.0" layoutY="801.0" text="Dish:">
+               <font>
+                  <Font name="CalabooseDEMO" size="48.0" />
+               </font>
+            </Label>
+            <MenuButton fx:id="dish" layoutX="991.0" layoutY="802.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="260.0" styleClass="menuButtons" text="Dish">
+               <items>
+                  <MenuItem fx:id="Chilesennogado" mnemonicParsing="false" styleClass="transparentButton" text="Chilesennogado" />
+                  <MenuItem fx:id="Elote" mnemonicParsing="false" text="Elote" />
+                  <MenuItem fx:id="Guacamole" mnemonicParsing="false" text="Guacamole" />
+                  <MenuItem fx:id="Huaraches" mnemonicParsing="false" text="Huaraches" />
+                  <MenuItem fx:id="Nacho" mnemonicParsing="false" styleClass="transparentButton" text="Nacho" />
+                  <MenuItem fx:id="Pozole" mnemonicParsing="false" text="Pozole" />
+                  <MenuItem fx:id="Quesadilla" mnemonicParsing="false" text="Quesadilla" />
+                  <MenuItem fx:id="Tacos" mnemonicParsing="false" text="Tacos" />
+               </items>
+               <font>
+                  <Font name="CalabooseDEMO" size="23.0" />
+               </font>
+            </MenuButton>
+            <Label fx:id="message" alignment="TOP_CENTER" layoutX="821.0" layoutY="963.0" prefHeight="75.0" prefWidth="414.0" text="Warning!" visible="false" wrapText="true">
+               <font>
+                  <Font name="CalabooseDEMO" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="820.0" layoutY="882.0" text="Order:">
+               <font>
+                  <Font name="CalabooseDEMO" size="48.0" />
+               </font>
+            </Label>
+            <MenuButton fx:id="order" layoutX="1049.0" layoutY="890.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="198.0" styleClass="menuButtons" text="Order">
+               <font>
+                  <Font name="CalabooseDEMO" size="27.0" />
+               </font>
+               <items>
+                  <MenuItem fx:id="orderOne" mnemonicParsing="false" text="1" />
+                  <MenuItem fx:id="orderTwo" mnemonicParsing="false" text="2" />
+               </items>
+            </MenuButton>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,98 @@
+.backgroundColor {
+    -fx-background-color: linear-gradient(to right,#FF512F ,#DD2476);
+}
+
+.barBackgroundColor {
+    -fx-background-color: linear-gradient(to right, #7F00FF, #E100FF);
+}
+
+.burgerbarColor {
+    -fx-background-color: linear-gradient(to right, #170E13, #4D4855);
+    -fx-background-radius: 0 0 30 30;
+}
+
+.invertedBurgerbarColor {
+    -fx-background-color: linear-gradient(to left, #170E13, #4D4855);
+    -fx-background-radius: 0 0 30 30;
+}
+
+.barButton {
+    -fx-background-color: linear-gradient(to left, #a8ff78, #78ffd6);
+    -fx-background-radius: 30 30 30 30;
+}
+
+.barButton:hover {
+    -fx-background-color: #04AA6D;
+    -fx-background-radius: 30 30 30 30;
+}
+
+.barButton:pressed {
+    -fx-background-color: #239c9c;
+    -fx-background-radius: 30 30 30 30;
+}
+
+.menuButtons {
+    -fx-background-color: linear-gradient(to left, #EA8D8D , #A890FE);
+    -fx-background-radius: 30 30 30 30;
+}
+
+.menuButtons:hover {
+    -fx-background-color: #04AA6D;
+    -fx-background-radius: 30 30 30 30;
+}
+
+.menuButtons:pressed {
+    -fx-background-color: #239c9c;
+    -fx-background-radius: 30 30 30 30;
+}
+
+.specifiedLabel{
+    -fx-text-fill: linear-gradient(to left, #a8ff78, #78ffd6);
+}
+
+.specifiedLabel:hover{
+    -fx-text-fill: BLack
+}
+
+.cyberpunkBackground{
+    -fx-background-color:linear-gradient(to left, #11998E , #38EF7D);
+}
+
+.sampleMenuBackground{
+    -fx-background-color:linear-gradient(to left, #764BA2 , #667EEA);
+}
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: #111111;
+    -fx-border-radius: 20;
+    -fx-padding: 5; 
+}
+
+.text-area {
+    -fx-background-color: transparent;
+    -fx-border-color: #111111;
+    -fx-border-radius: 20;
+    -fx-padding: 5; 
+}
+
+.trasparentButton{
+    -fx-background-color: transparent;
+}
+
+.menu-item {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 27px; /* Set font size */
+    -fx-text-fill: blue; /* Set font weight */
+    -fx-background-color: linear-gradient(to left, #a8ff78, #78ffd6);
+    -fx-background-radius: 30 30 30 30; /* Set background color */
+    -fx-padding: 5px 10px;
+}
+
+.menu-item:hover {
+    -fx-background-color: lightgray; /* Change background color on hover */
+}
+
+.anotherGradient{
+    -fx-background-color: linear-gradient(to bottom, #020024, #090979 , #00d4ff);
+}

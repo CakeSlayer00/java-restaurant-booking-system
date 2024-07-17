@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1647.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1643.0" prefWidth="1280.0" styleClass="backgroundColor" stylesheets="@style.css">
+         <children>
+            <HBox fx:id="images" opacity="0.36" prefHeight="100.0" prefWidth="200.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/preview.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="400.0" fitWidth="400.0">
+                     <image>
+                        <Image url="@images/mexicano.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="400.0" fitWidth="400.0">
+                     <image>
+                        <Image url="@images/mexicano2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="400.0" fitWidth="400.0" opacity="0.94">
+                     <image>
+                        <Image url="@images/mexicano1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="400.0" fitWidth="400.0">
+                     <image>
+                        <Image url="@images/mexicano3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <StackPane fx:id="burgerBackgroundFake" alignment="TOP_LEFT" prefHeight="208.0" prefWidth="262.0" styleClass="burgerbarColor" stylesheets="@style.css" AnchorPane.topAnchor="40.0" />
+            <AnchorPane prefHeight="30.0" prefWidth="200.0" styleClass="barBackgroundColor" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <StackPane prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label contentDisplay="CENTER" text="El Compadre's">
+                           <font>
+                              <Font name="CalabooseDEMO" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="menu" fitHeight="54.0" fitWidth="51.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/burgerBar.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="dropDownMenu" layoutY="32.0" prefHeight="234.0" prefWidth="262.0" snapToPixel="false" styleClass="burgerbarColor" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <VBox prefHeight="214.0" prefWidth="263.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Button fx:id="home" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#switchToHomeScreen" prefHeight="28.0" prefWidth="100.0" styleClass="barButton" stylesheets="@style.css" text="Home">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font name="SF Pro Text Semibold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="mainMenu" alignment="TOP_LEFT" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" styleClass="barButton" stylesheets="@style.css" text="Menu">
+                           <font>
+                              <Font name="SF Pro Text Semibold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bookingMenu" alignment="TOP_LEFT" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToBookingScene" prefHeight="28.0" prefWidth="100.0" styleClass="barButton" stylesheets="@style.css" text="Booking">
+                           <font>
+                              <Font name="SF Pro Text Semibold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="gallery" alignment="TOP_LEFT" layoutX="30.0" layoutY="87.0" mnemonicParsing="false" onAction="#switchToGalleryScene" prefHeight="28.0" prefWidth="99.0" styleClass="barButton" stylesheets="@style.css" text="Gallery">
+                           <font>
+                              <Font name="SF Pro Text Semibold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </VBox>
+                  <Button fx:id="contactUsMenu" alignment="TOP_LEFT" layoutX="145.0" layoutY="97.0" mnemonicParsing="false" onAction="#switchToContactUsScene" prefHeight="28.0" prefWidth="99.0" styleClass="barButton" stylesheets="@style.css" text="Contact Us">
+                     <font>
+                        <Font name="SF Pro Text Semibold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="logInButton" alignment="TOP_LEFT" layoutX="145.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToLogInScene" prefHeight="28.0" prefWidth="100.0" styleClass="barButton" stylesheets="@style.css" text="Log In">
+                     <font>
+                        <Font name="SF Pro Text Semibold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="signInButton" alignment="TOP_LEFT" layoutX="145.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToSingInScene" prefHeight="28.0" prefWidth="100.0" styleClass="barButton" stylesheets="@style.css" text="Sign In">
+                     <font>
+                        <Font name="SF Pro Text Semibold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="exitButton" alignment="TOP_LEFT" disable="true" layoutX="145.0" layoutY="135.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" styleClass="barButton" stylesheets="@style.css" text="Exit">
+                     <font>
+                        <Font name="SF Pro Text Semibold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <StackPane layoutY="438.4" prefHeight="1205.0" prefWidth="1280.0" style="-fx-background-color: #111111;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="438.0" />
+            <Label alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="125.0" layoutY="255.0" prefHeight="88.0" prefWidth="1039.0" styleClass="specifiedLabel" stylesheets="@style.css" text="Main Menu" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="116.0">
+               <font>
+                  <Font name="CalabooseDEMO" size="50.0" />
+               </font>
+            </Label>
+            <Button fx:id="myProfileButton" alignment="CENTER" layoutX="51.0" mnemonicParsing="false" onAction="#switchToProfileScene" prefHeight="39.0" prefWidth="171.0" styleClass="trasparentButton" stylesheets="@style.css" text="My Profile" visible="false">
+               <font>
+                  <Font name="CalabooseDEMO" size="18.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="248.0" layoutY="465.0" prefHeight="53.0" prefWidth="144.0" text="Tacos" textAlignment="CENTER" textFill="#c1c1c1">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="15.0" layoutY="474.0" prefHeight="232.0" prefWidth="600.0" text="is a traditional Mexican food consisting of a small hand-sized corn- or wheat-based tortilla topped with a filling. " textAlignment="CENTER" textFill="#c1c1c1" wrapText="true">
+               <font>
+                  <Font name="CalabooseDEMO" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="249.0" layoutY="661.0" prefHeight="53.0" prefWidth="144.0" text="\$1.50" textAlignment="CENTER" textFill="#c1c1c1">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="CENTER" layoutX="237.0" layoutY="737.0" prefHeight="53.0" prefWidth="150.0" text="Elote" textAlignment="CENTER" textFill="#dc982a">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="234.0" layoutY="970.0" prefHeight="53.0" prefWidth="144.0" text="\$2.00" textAlignment="CENTER" textFill="#dc982a">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="764.0" prefHeight="232.0" prefWidth="600.0" text="elote is a Mexican preparation of corn on the cob. The ears of corn are grilled, then slathered with mayo or crema, and finally topped with lime, chile, and Mexican cheese such as Cotija" textAlignment="CENTER" textFill="#dc982a" wrapText="true">
+               <font>
+                  <Font name="CalabooseDEMO" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="174.0" layoutY="1037.0" prefHeight="53.0" prefWidth="267.0" text="Guacamole" textAlignment="CENTER" textFill="#dc1f1f">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="237.0" layoutY="1273.0" prefHeight="53.0" prefWidth="144.0" text="\$2.50" textAlignment="CENTER" textFill="#dc1f1f">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="CENTER" layoutX="13.0" layoutY="1067.0" prefHeight="232.0" prefWidth="600.0" text="elote is a Mexican preparation of corn on the cob. The ears of corn are grilled, then slathered with mayo or crema, and finally topped with lime, chile, and Mexican cheese such as Cotija" textAlignment="CENTER" textFill="#dc1f1f" wrapText="true">
+               <font>
+                  <Font name="CalabooseDEMO" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="174.0" layoutY="1338.0" prefHeight="54.0" prefWidth="269.0" text="Huaraches" textAlignment="CENTER" textFill="#b06db7">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="237.0" layoutY="1571.0" prefHeight="53.0" prefWidth="144.0" text="\$3.00" textAlignment="CENTER" textFill="#b06db7">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="1365.0" prefHeight="232.0" prefWidth="600.0" text="elote is a Mexican preparation of corn on the cob. The ears of corn are grilled, then slathered with mayo or crema, and finally topped with lime, chile, and Mexican cheese such as Cotija" textAlignment="CENTER" textFill="#b06db7" wrapText="true">
+               <font>
+                  <Font name="CalabooseDEMO" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="854.0" layoutY="459.0" prefHeight="53.0" prefWidth="144.0" text="Nacho" textAlignment="CENTER" textFill="#30cf9d">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="621.0" layoutY="468.0" prefHeight="232.0" prefWidth="640.0" text="is a traditional Mexican food consisting of a small hand-sized corn- or wheat-based tortilla topped with a filling. " textAlignment="CENTER" textFill="#30cf9d" wrapText="true">
+               <font>
+                  <Font name="CalabooseDEMO" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="855.0" layoutY="655.0" prefHeight="53.0" prefWidth="144.0" text="\$1.75" textAlignment="CENTER" textFill="#30cf9d">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="CENTER" layoutX="850.0" layoutY="731.0" prefHeight="53.0" prefWidth="150.0" text="Pozole" textAlignment="CENTER" textFill="#621eea">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="853.0" layoutY="964.0" prefHeight="53.0" prefWidth="144.0" text="\$2.25" textAlignment="CENTER" textFill="#621eea">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="CENTER" layoutX="617.0" layoutY="758.0" prefHeight="232.0" prefWidth="634.0" text="elote is a Mexican preparation of corn on the cob. The ears of corn are grilled, then slathered with mayo or crema, and finally topped with lime, chile, and Mexican cheese such as Cotija" textAlignment="CENTER" textFill="#621eea" wrapText="true">
+               <font>
+                  <Font name="CalabooseDEMO" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="759.0" layoutY="1034.0" prefHeight="54.0" prefWidth="306.0" text="Quesadilla" textAlignment="CENTER" textFill="#d6e16e">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="855.0" layoutY="1267.0" prefHeight="53.0" prefWidth="144.0" text="\$2.00" textAlignment="CENTER" textFill="#d6e16e">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="CENTER" layoutX="619.0" layoutY="1061.0" prefHeight="232.0" prefWidth="634.0" text="elote is a Mexican preparation of corn on the cob. The ears of corn are grilled, then slathered with mayo or crema, and finally topped with lime, chile, and Mexican cheese such as Cotija" textAlignment="CENTER" textFill="#d6e16e" wrapText="true">
+               <font>
+                  <Font name="CalabooseDEMO" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="717.0" layoutY="1332.0" prefHeight="54.0" prefWidth="420.0" text="Chilesennogado" textAlignment="CENTER" textFill="#7cdb2c">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="852.0" layoutY="1565.0" prefHeight="53.0" prefWidth="144.0" text="\$1.25" textAlignment="CENTER" textFill="#7cdb2c">
+               <font>
+                  <Font name="CalabooseDEMO" size="32.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="CENTER" layoutX="616.0" layoutY="1359.0" prefHeight="232.0" prefWidth="634.0" text="elote is a Mexican preparation of corn on the cob. The ears of corn are grilled, then slathered with mayo or crema, and finally topped with lime, chile, and Mexican cheese such as Cotija" textAlignment="CENTER" textFill="#7cdb2c" wrapText="true">
+               <font>
+                  <Font name="CalabooseDEMO" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

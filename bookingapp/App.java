@@ -1,0 +1,30 @@
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+public class App extends Application {
+    public static boolean isSignedOrLoggedIn = false;
+    public static Consumer consumer;
+    public static PersonData data1;
+    public static PersonData data2;
+    public static boolean modify1;
+    public static boolean modify2;
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+
+        Parent root = FXMLLoader.load(getClass().getResource("hellofx.fxml"));
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root , 1280 , 720));
+        primaryStage.show();
+    }
+
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
